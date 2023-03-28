@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+    --background-color: #272b1f;
+    --border-color: rgb(255, 255, 255, 0.1);
+    --highlight-color: rgb(126, 87, 194);
+  }
+
+  body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3, a, p, span {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.2;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  .hrefc {
+    color: rgb(126, 87, 194);
+  }
+  
+  a:hover {
+    color: var(--highlight-color);
+  }
+  .logo {
+    font-weight: 1000;
+  }
+/* Navbar styling */
+
+.navbar {
+    background-color: var(--primary-color);
+    background-image: url(../images/naavbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: 85px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style-type: none
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+}
+
+  
+main {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  main > article {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: transform 400ms ease;  
+  }
+  
+  main > article[data-status="inactive"] {
+    transform: translateX(-100%);
+    transition: none;
+  }
+  
+  main > article[data-status="active"] {
+    transform: translateX(0%);
+  }
+  
+  main > article[data-status="before"] {
+    transform: translateX(-100%);
+  }
+  
+  main > article[data-status="after"] {
+    transform: translateX(100%);
+  }
+  
+  main > article[data-status="becoming-active-from-before"] {
+    transform: translateX(-100%);
+    transition: none;
+  }
+  
+  main > article[data-status="becoming-active-from-after"] {
+    transform: translateX(100%);
+    transition: none;
+  }
+  
+  main > article > .article-section {
+    height: 100%;
+    display: flex;
+  }
+  
+  main > article > .article-description-section,
+  main > article > .article-nav-section {
+    border-left: 1px solid var(--border-color);
+  }
+  
+  main > article > .article-title-section,
+  main > article > .article-nav-section {
+    border-top: 1px solid var(--border-color);
+  }
+  
+  main > article:first-child > .article-image-section {
+    background-image: url("../images/shrek1.jpg");
+  }
+  
+  main > article:nth-child(2) > .article-image-section {
+    background-image: url("../images/shrek2.jpeg");
+  }
+  
+  main > article:nth-child(3) > .article-image-section {
+    background-image: url("../images/shrek3.jfif");
+  }
+  
+  main > article:nth-child(4) > .article-image-section {
+    background-image: url("../images/shrek4.jpg");
+  }
+  
+  main > article > .article-image-section {
+    background-position: center;
+    background-size: cover;
+  }
+  
+  main > article > .article-description-section {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem; 
+  }
+  
+  main > article > .article-description-section > p {
+    color: rgba(255, 255, 255, 0.651);
+    font-size: 1.25em;
+  }
+  
+  main > article > .article-description-section > p  > a:hover {
+    text-decoration: underline;
+  }
+  
+  main > article > .article-title-section {
+    align-items: center; 
+    justify-content: space-between;
+    padding: 2rem 4rem;
+  }
+  
+  main > article > .article-title-section * {
+    color: white;
+  }
+  
+  main > article > .article-title-section > h2 {
+    flex-basis: 50%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.5rem;
+    line-height: 3rem;
+    margin: 0px;
+    text-transform: uppercase;
+  }
+  
+  main > article > .article-title-section > i {
+    color: rgba(255, 255, 255, 0.75);
+    font-size:  4rem;
+  }
+  
+  main > article > .article-nav-section > .article-nav-button {
+    background-color: transparent;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 3rem;
+    cursor: pointer;
+  }
+  
+  main > article > .article-nav-section > .article-nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+  
+  main > article > .article-nav-section > .article-nav-button:nth-child(2) {
+    border-left: 1px solid var(--border-color);
+  }
+  
+  @media(max-width: 860px) {    
+    main {
+      overflow-y: auto;
+    }
+    
+    main > article {
+      grid-template-columns: none;
+      grid-template-rows: 1fr repeat(3, 0.5fr);
+      height: max(800px, 100%);
+    }
+     
+    main > article > .article-title-section > h2 {
+      font-size: 3rem; 
+      line-height: 2.6rem;
+    }
+    
+    main > article > .article-title-section > i {
+      font-size: 3rem; 
+    }
+    
+    main > article > .article-description-section,
+    main > article > .article-nav-section {
+      border-left: none;
+    }
+  
+    main > article > .article-image-section {
+      order: 1;
+      background-size: 100% 100%;    
+    }
+    
+    main > article > .article-title-section {
+      border-bottom: 1px solid var(--border-color);
+      order: 2;
+    }
+    
+    main > article > .article-description-section {
+      justify-content: center;
+      order: 3;
+    }
+    
+    main > article > .article-nav-section {
+      border-bottom: 1px solid var(--border-color);
+      order: 4;
+    }
+  }
+  
+  @media(max-width: 573px) {  
+    .navbar
+    {
+        height: 130px;
+        padding: 5px;
+    }
+
+    .logo {
+        padding: 0;
+        margin: 5px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    main > article {
+      grid-template-rows: 1fr repeat(3, 0.5fr);
+      height: max(700px, 100%);
+    }
+    
+    main > article > .article-title-section {
+      padding: 2rem;
+    }
+    
+    main > article > .article-image-section > h2 {
+       background-size: contain;
+    }
+    main > article > .article-title-section > h2 {
+      flex-basis: 70%;
+      font-size: 1.75em; 
+      line-height: 1.5rem;
+    }
+    
+    main > article > .article-title-section > i {
+      font-size: 2rem; 
+    }
+    
+    main > article > .article-description-section {
+      padding: 2rem;
+    }
+    
+    main > article > .article-description-section > p {
+      font-size: 1rem;
+    }
+  }

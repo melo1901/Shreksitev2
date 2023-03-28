@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+    --primary-color: #215732;
+    --brown-use: #465f3c;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color:#588065;
+}
+
+ul {
+    list-style-type: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.white {
+    color: white;
+}
+
+.no-color {
+    color: unset;
+    font-weight: 1000;
+}
+
+.card .description {
+    color: #613e1b;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+.login-register {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+
+/* Navbar styling */
+.logo {
+    font-weight: 1000;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    background-image: url("../images/naavbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: 85px;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+}
+
+.navbar .flex{
+    justify-content: space-between;
+}
+/* Showcase */
+
+.showcase {
+    height: 400px;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--primary-color);
+    color:#fff;
+    position: relative;
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    overflow: visible;
+    grid-template-columns: 55% auto;
+    gap: 30px;  
+}
+
+.showcase-text {
+    animation: slideInFromLeft 1s ease-in;
+}
+
+.showcase-form {
+    position: relative;
+    top: 60px;
+    height: 400px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in;
+}
+
+.showcase-form .form-control {
+    margin: 25px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'],
+.showcase-form input[type='password'] {
+    border: 0;
+    border-bottom: 1px solid #613e1b;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.showcase-form .is-invalid .emailvalid {
+    visibility: visible;
+}
+
+
+.showcase::before,
+.showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    background-color: #fff;
+}
+
+/*  Login  */
+.login {
+    height: 800px;
+    background-image: url(../images/backgroundc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.login h1 {
+    font-size: 40px;
+}
+
+.login p {
+    margin: 20px 0;
+}
+
+.login .grid {
+    overflow: visible;
+    grid-template-columns: 55% auto;
+    gap: 30px;  
+}
+
+.login-form {
+    position: relative;
+    top: 60px;
+    height: 525px;
+    width: 500px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.login-form .form-control {
+    margin: 25px 0;
+}
+
+.login-form input[type='text'],
+.login-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #613e1b;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+.login-form input[type='password'] {
+    border: 0;
+    border-bottom: 1px solid #613e1b;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.table-form {
+    position: relative;
+    top: 0px;
+    height: 430px;
+    width: 500px;
+    padding: 30px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.table-form input[type='text'] {
+    border: 0;
+    border-bottom: 1px solid #613e1b;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.delete-char {
+    margin-top: 2px;
+}
+
+/* Contact Us */
+
+.contact {
+    height: 800px;
+    background-image: url(../images/backgroundc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--primary-color);
+    color:#fff;
+    position: relative;
+}
+
+.contact h1 {
+    font-size: 40px;
+}
+
+.contact p {
+    margin: 20px 0;
+}
+
+.contact .grid {
+    overflow: visible;
+    grid-template-columns: 55% auto;
+    gap: 30px;  
+}
+
+.contact-form {
+    position: relative;
+    top: 60px;
+    height: 600px;
+    width: 500px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.contact-form:hover {
+    transition: transform 0.2s ease-in;
+    transform: translateY(-15px);
+}
+
+.contact-form .form-control {
+    margin: 25px 0;
+}
+
+.contact-form input[type='text'],
+.contact-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #613e1b;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.contact-form input:focus {
+    outline: none;
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 100%;
+}
+
+
+
+/* Stats */
+.stats {
+    padding-top: 100px;
+}
+
+.stat-heading {
+    max-width: 500px;
+    margin: auto;
+}
+
+.stats .grid h3 {
+    font-size: 35px;
+}
+
+.stats .grid p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.stats-color {
+    color: #333;
+}
+
+/* Shrek 5*/
+
+.sfive .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
+.fs {
+    color: white;
+}
+
+/* Movies */
+
+.movies .flex {
+    flex-wrap: wrap;
+}
+
+.movies .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+
+.movies-header-color {
+    color: #0D3E00;
+    font-weight: bold;
+}
+
+.movies-size {
+    width: 225px;
+    height: 175px;
+}
+
+
+.movies .card:hover {
+    transform: translateY(-15px);
+}
+
+/* Footer */
+.footer .social a {
+    margin: 0 10px;
+}
+
+/* Containers revealing*/
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Tablets and under */
+@media(max-width: 860px) {
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .sfive .grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+    }
+
+    .contact {
+        width: auto;
+    }
+
+    .contact-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .contact-form {
+        
+        justify-self: center;
+        margin: auto;
+        height: auto;
+        width: 300px;
+    }
+
+
+     .fixed-btn {
+        width: 140px;
+        height: 35px;
+        background-repeat: no-repeat;
+        }
+        
+    .shreking video {
+        max-width: 90%;
+    }
+
+    dt {
+        font-size: 3vw;
+    }
+
+    textarea {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media(max-width: 572px) {
+    .navbar
+    {
+        height: 130px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .fixed-btn {
+        width: 88px;
+        height: 22px;
+        background-repeat: no-repeat;
+    }
+
+    .shreking video {
+       max-width: 80%;
+    }
+
+    dt {
+        font-size: 4vw;
+    }
+
+    
+}
